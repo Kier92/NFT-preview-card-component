@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Open+Sans&family=Outfit:wght@400;700&family=Overpass:wght@400;600&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --desktop-width: 1440px;
+    --mobile-width: 375px;
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --font-size: 18px;
+    --outer-border-radius: 15px;
+    --inner-border-radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-BG);
+    font-size: var(--font-size);
+    color: var(--Soft-blue);
+    font-family: 'Outfit', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--White);
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--card-BG);
+    padding: 1.5rem;
+    border-radius: var(--outer-border-radius);
+    width: calc(var(--mobile-width) - 1rem);
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container img {
+    width: 100%;
+    border-radius: var(--inner-border-radius);
+}
+
+.img-container:hover {
+    background: url("./images/icon-view.svg") no-repeat center;
+}
+
+.img-container img:hover {
+    opacity: .40;
+}
+
+.img-container .view {
+    width: 20%;
+    position: absolute;
+    z-index: 1000;
+    top: 8rem;
+    left: 8rem;
+}
+
+.title {
+    color: var(--White);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.days-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0 1.5rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.author-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.author-container img {
+    width: 12%;
+    border: .15rem solid var(--White);
+    border-radius: 50%;
+}
+
+.days-container > div {
+    display: flex;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: calc(var(--desktop-width) / 4);
+    }
+}
